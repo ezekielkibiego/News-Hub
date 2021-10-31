@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -5,10 +6,19 @@
         {% if title %}
         <title> {{ title }}</title>
         {% else %}
-        <title>  Welcome to The Best News Hub Website Online </title>
+        <title> Welcome to the best News Review website </title>
         {% endif %}
     </head>
     <body>
-
-    </body>
+        <ul>
+            {% for popular_source in popular_sources %}
+            <h4><a href="/sources/{{popular_source.url}}">
+              <p class="card-text">{{popular_source.id}}</p>
+          </a></h4>
+          <p>{{popular_source.description}}</p>
+    
+            {% endfor %}
+  
+      </ul>
+      </body>
 </html>
