@@ -1,24 +1,11 @@
+{% extends 'base.html'%}
+{% import 'macros.html' as macro%}
 
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        {% if title %}
-        <title> {{ title }}</title>
-        {% else %}
-        <title> Welcome to the best News Review website </title>
-        {% endif %}
-    </head>
-    <body>
-        <ul>
-            {% for popular_source in popular_sources %}
-            <h4><a href="/sources/{{popular_source.url}}">
-              <p class="card-text">{{popular_source.id}}</p>
-          </a></h4>
-          <p>{{popular_source.description}}</p>
-    
-            {% endfor %}
+{% block content %}
   
-      </ul>
-      </body>
-</html>
+        <!-- Popular movie -->
+        <h3> Popular News Sources</h3>
+        
+            {{ macro.displaySourcesList(popular_sources)}}
+        
+{% endblock%}

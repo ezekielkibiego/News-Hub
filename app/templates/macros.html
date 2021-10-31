@@ -1,7 +1,9 @@
-<!-- {% macro.displayNewsSources(sources) %}
+{% macro displaySourcesList(sources_list) %}
 
-    {% popular_source in popular_sources %}
-        <li>{{ sources.title}}</li>
+    {% for sources in sources_list %}
+        {{ sources.name}}
+        <p>{{sources.description}}</p>
+        <a href="/news-source{{ sources.url }}" class="btn btn-info mb-2">Read More</a>
     {% endfor %}
 
-{% endmacro %} -->
+{% endmacro %}
