@@ -42,7 +42,10 @@ To get the code..
   export API_KEY='{Enter your News Api Key}'
   ```
 4. Running the application
+
   ```bash
+  chmod a+x start.sh
+  
   ./start.sh
   ```
 5. Testing the application
