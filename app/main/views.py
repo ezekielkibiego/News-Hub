@@ -11,9 +11,9 @@ def index():
     View root page function that returns the index page and its data
     '''
 
-    # Getting popular movie
+    
     popular_source = get_sources()
-    # print("sources" ,popular_sources)
+    
     
     
     
