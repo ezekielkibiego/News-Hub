@@ -16,6 +16,7 @@ def index():
     # print("sources" ,popular_sources)
     
     
+    
 
     title = 'Home - Welcome to Online News Website'
     return render_template('index.html', title = title, popular_sources = popular_source )

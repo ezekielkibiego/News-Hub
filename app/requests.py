@@ -2,11 +2,11 @@ import urllib.request
 import json
 from .models import Sources, Articles
 
-# getting api key
+
 api_key = ''
-# getting news base url for the sources
+
 sources_url_sources = None
-# getting news articles base url from the source id
+
 sources_url_articles = None
 
 
@@ -99,6 +99,8 @@ def get_articles(sources_id):
         print(articles_results_list)
         
     return articles_results
+
+
 
 
 

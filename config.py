@@ -8,7 +8,7 @@ class Config:
     """
     NEWS_API_SOURCES_URL = 'https://newsapi.org/v2/sources?apiKey={}'
     NEWS_API_ARTICLES_URL = 'https://newsapi.org/v2/top-headlines?sources={}&apiKey={}'
-    NEWS_API_KEY = os.environ.get('NEWS_API_KEY')
+    NEWS_API_KEY = 'd90f1979a57b49d681affbc8c311ccca'
    
 class ProdConfig(Config):
     pass
