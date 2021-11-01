@@ -15,7 +15,7 @@ https://news-hub-api.herokuapp.com/
 
 ## Screenshot
 
-<img src="">
+<img src="app/static/images/Screenshot.png">
 
 ## User Story
 
