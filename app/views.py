@@ -1,27 +1,28 @@
 from flask import render_template
 from app import app
-from .requests import get_articles, get_sources
+from .requests import get_sources,get_articles
 
-# Views
+
 @app.route('/')
 def index():
 
     '''
     View root page function that returns the index page and its data
     '''
+
     # Getting popular movie
     popular_source = get_sources()
-    # print(source)
-    title = 'Home - Welcome to The best Movie Review Website Online'
-    return render_template('index.html', title = title,popular_sources = popular_source)
+    # print("sources" ,popular_sources)
+    business_news = get_sources()
+    sport_news = get_sources()
+    
 
-@app.route('/news-sources/articles/<sources_id>')
-def articles(sources_id):
-    '''
-    View articles page => function that returns the articles page from a source id 
-    '''
-    # Getting articles based on the source id
-    articles = get_articles(sources_id)
-    title = f'{sources_id}'
+    title = 'Home - Welcome to Online News Website'
+    return render_template('index.html', title = title, popular_sources = popular_source,business = business_news,sport = sport_news )
 
-    return render_template('articles.html', title=title, articles=articles)
+@app.route('/articles/<source_id>')
+def articles(source_id):
+    articles = get_articles(source_id)
+    print(articles)
+
+    return render_template('articles.html',articles = articles)

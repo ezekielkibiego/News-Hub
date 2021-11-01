@@ -2,17 +2,39 @@
 {% macro displaySourcesList(sources_list) %}
 
     {% for sources in sources_list %}
-        <div class="col-md-6">
-            <h4 class="text-center"> {{ sources.name}}</h4>
-            <p>{{ sources.description}}</p>
-            <!-- <p>{{sources.description}}</p> -->
-             <p class="text-center">
-                
-                <a href="/news-source{{ sources.url }}" class="btn btn-info mb-2">Read More</a>
-             </p>
-        </div>
-
+        <a href="/articles/{{ sources.id}}">{{ sources.name}}</a></li>
     {% endfor %}
 
 {% endmacro %}
 
+{% macro displayArticlesList(articles_list) %}
+
+{% for articles in articles_list %}
+
+<div class="col-md-3">
+    <div class="card mb-4">
+        {% if articles.urlToImage %}
+        <img src="{{ articles.urlToImage }}" class="card-img-top" alt="{{ articles.title }}">
+        {% endif %}
+
+        <div class="card-body">
+            <h6 class="">{{ articles.title }}</h6>
+            <p class="card-text"><small>{{ articles.description[:110] }}...</small></p>
+            <div class="d-flex justify-content-around">
+                <div>
+                    <p><strong><span class="badge rounded-pill bg-warning text-dark"><small>{{ articles.publishedAt
+                                    }}</small></span></strong>
+                    </p>
+                </div>
+                <div class="text-center">
+                    <a href="{{ articles.url }}" target="_blank" class="color-main"><small>Read More <i
+                                class="fa fa-arrow-right"></i></small> </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>}
+
+    {% endfor %}
+
+{% endmacro %}
