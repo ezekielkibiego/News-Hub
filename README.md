@@ -1,5 +1,7 @@
 # News-Hub
 
+### 22nd Oct. 2021
+
 ## Author
 
 [Ezekiel Kibiego](https://github.com/ezekielkibiego)
