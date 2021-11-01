@@ -2,16 +2,18 @@
 {% import 'macros.html' as macro%}
 
 {% block styles%}
-{{ super() }}
-<link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+    {{ super() }}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
 {% endblock %}
 
 {% block content %}
 
 <div class="container">
     <h2 class="text-center"> Popular News Sources Around The Globe</h2>
-
-            {{ macro.displaySourcesList(popular_sources)}}
+            
+            <div class="card">
+                <h4>{{ macro.displaySourcesList(popular_sources)}}</h4>
+            </div>
 
     
            

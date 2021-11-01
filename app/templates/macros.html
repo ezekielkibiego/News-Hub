@@ -2,7 +2,7 @@
 {% macro displaySourcesList(sources_list) %}
 
     {% for sources in sources_list %}
-        <a href="/articles/{{ sources.id}}">{{ sources.name}}</a></li>
+        <a href="/articles/{{ sources.id}}"><button>{{ sources.name }}</button></a>
     {% endfor %}
 
 {% endmacro %}
@@ -11,29 +11,30 @@
 
 {% for articles in articles_list %}
 
-<div class="col-md-3">
-    <div class="card mb-4">
-        {% if articles.urlToImage %}
-        <img src="{{ articles.urlToImage }}" class="card-img-top" alt="{{ articles.title }}">
-        {% endif %}
+<div class="">
+    <div class=" col-md-6">
+        <div class="card">
+    {% if articles.urlToImage %}
+            <img src="{{ articles.urlToImage }}" height="400" width="500" alt="{{ articles.title }}">
 
-        <div class="card-body">
-            <h6 class="">{{ articles.title }}</h6>
-            <p class="card-text"><small>{{ articles.description[:110] }}...</small></p>
-            <div class="d-flex justify-content-around">
-                <div>
-                    <p><strong><span class="badge rounded-pill bg-warning text-dark"><small>{{ articles.publishedAt
-                                    }}</small></span></strong>
-                    </p>
-                </div>
-                <div class="text-center">
-                    <a href="{{ articles.url }}" target="_blank" class="color-main"><small>Read More <i
-                                class="fa fa-arrow-right"></i></small> </a>
+    {% endif %}
+    
+            <div class="card-body">
+                <h6 class="">{{ articles.title }}</h6>
+                <p class="card-text"><small> {{ articles.description }}</small></p>
+                <div class="">
+                    <div>
+                        <p><strong><span class=""><small> {{ articles.publishedAt  }} </small></span></strong>
+                        </p>
+                    </div>
+                    <div class="">
+                        <a href="{{ articles.url }}" target="_blank" class=""><button> Read More </button></a> <br><br>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>}
+</div><br>
 
     {% endfor %}
 

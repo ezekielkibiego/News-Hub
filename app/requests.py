@@ -1,24 +1,27 @@
-from app import app
-import urllib.request,json
+import urllib.request
+import json
+from .models import Sources, Articles
 
-# from app.views import articles
-from .models import sources
-from .articles import Articles
-Sources=sources.Sources
+# getting api key
+api_key = ''
+# getting news base url for the sources
+sources_url_sources = None
+# getting news articles base url from the source id
+sources_url_articles = None
 
-# Getting api key
-api_key = app.config['NEWS_API_KEY']
 
+def configure_requests(app):
+    global api_key, sources_url_sources, sources_url_articles
+    sources_url_sources = app.config['NEWS_API_SOURCES_URL']
+    sources_url_articles = app.config['NEWS_API_ARTICLES_URL']
+    api_key = app.config['NEWS_API_KEY']
 
-# Getting the movie base url
-sources_url = app.config["NEWS_API_SOURCES_URL"]
 
 def get_sources():
     '''
     Function that gets the json response to url request
     '''
-    get_sources_url= 'https://newsapi.org/v2/sources?apiKey=359c21d8ee194ca4bed99dc9f5f7b6e8'
-    # print(get_source_url)
+    get_sources_url= 'https://newsapi.org/v2/sources?apiKey=d90f1979a57b49d681affbc8c311ccca'
     with urllib.request.urlopen(get_sources_url) as url:
         get_sources_data = url.read()
         get_sources_response = json.loads(get_sources_data)
@@ -81,7 +84,7 @@ def get_articles(sources_id):
     '''
         Function that gets the json response to our url request using the source id
     '''
-    get_articles_url = 'https://newsapi.org/v2/top-headlines?sources={}&apiKey=359c21d8ee194ca4bed99dc9f5f7b6e8'.format(
+    get_articles_url = 'https://newsapi.org/v2/top-headlines?sources={}&apiKey=d90f1979a57b49d681affbc8c311ccca'.format(
         sources_id, api_key)
     with urllib.request.urlopen(get_articles_url) as url:
         get_articles_data = url.read()
