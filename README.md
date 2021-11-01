@@ -45,7 +45,7 @@ To get the code..
 
   ```bash
   chmod a+x start.sh
-  
+
   ./start.sh
   ```
 5. Testing the application
