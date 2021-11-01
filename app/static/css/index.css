@@ -5,7 +5,16 @@ body{
 .navbar{
     background-color: green;
     color: orange;
+    border: none;
 }
 h4{
     color: orange;
+}
+button{
+    background-color: green;
+    color: orange;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
 }
