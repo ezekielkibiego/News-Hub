@@ -1,20 +1,28 @@
 body{
-    background-color: orange;
-    color: green;
+    background-color: rgb(236, 160, 17);
+    color: whitesmoke;
 }
 .navbar{
     background-color: green;
-    color: orange;
+    color: whitesmoke;
     border: none;
 }
 h4{
-    color: orange;
+    color: whitesmoke;
 }
 button{
     background-color: green;
-    color: orange;
+    color: whitesmoke;
     border: none;
     border-radius: 5px;
     padding: 5px;
     margin: 5px;
+}
+button:hover{
+    background-color: whitesmoke;
+    color: orange;
+}
+h4:hover{
+    background-color: whitesmoke;
+    color: orange;
 }

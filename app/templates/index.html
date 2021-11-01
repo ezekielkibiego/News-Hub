@@ -11,13 +11,13 @@
 <div class="container">
     <h2 class="text-center"> Popular News Sources Around The Globe</h2>
             
-            <div class="card">
-                <h4>{{ macro.displaySourcesList(popular_sources)}}</h4>
-            </div>
-
-    
-           
+            <div class="row">
+                <div class="col-md-12">
+                    <h4>{{ macro.displaySourcesList(popular_sources)}}</h4>
+                </div>
+            </div>      
 </div>
+<br>
 
 <div class="bg-secondary">
     {% block footer %}
