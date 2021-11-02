@@ -28,6 +28,7 @@ button:hover{
 .card:hover{
     box-shadow: 0 0 10px , 0 0 20px rgb(112, 108, 108), 0 0 40px rgb(112, 108, 108);
     border-radius: 10px;
+    padding: 8px;
 
 }
 .footer{
