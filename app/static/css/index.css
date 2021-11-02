@@ -1,6 +1,5 @@
 body{
     background-color: rgb(236, 160, 17);
-    color: whitesmoke;
     font-family: roboto;
 }
 .navbar{
@@ -8,7 +7,7 @@ body{
     color: whitesmoke;
     border: none;
 }
-h4{
+h2 h4{
     color: whitesmoke;
 }
 button{
@@ -21,9 +20,10 @@ button{
 }
 button:hover{
     background-color: whitesmoke;
-    color: orange;
+    color: green;
 }
-h4:hover{
-    background-color: whitesmoke;
-    color: orange;
+
+
+.card:hover{
+    box-shadow: 0 0 10px , 0 0 20px rgb(112, 108, 108), 0 0 40px rgb(112, 108, 108);
 }

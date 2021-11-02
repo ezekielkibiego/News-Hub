@@ -15,6 +15,7 @@ def configure_requests(app):
     sources_url_sources = app.config['NEWS_API_SOURCES_URL']
     sources_url_articles = app.config['NEWS_API_ARTICLES_URL']
     api_key = app.config['NEWS_API_KEY']
+    
 
 
 def get_sources():
@@ -99,6 +100,8 @@ def get_articles(sources_id):
         print(articles_results_list)
         
     return articles_results
+
+
 
 
 

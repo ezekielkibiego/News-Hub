@@ -27,3 +27,6 @@ def articles(sources_id):
     print(articles)
 
     return render_template('articles.html',articles = articles)
+
+
+
