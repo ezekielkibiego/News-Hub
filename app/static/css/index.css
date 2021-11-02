@@ -30,3 +30,6 @@ button:hover{
     border-radius: 10px;
 
 }
+.footer{
+    border: 5px solid green;
+}
