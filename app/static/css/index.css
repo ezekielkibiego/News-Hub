@@ -1,6 +1,7 @@
 body{
     background-color: rgb(236, 160, 17);
     font-family: roboto;
+    color: black;
 }
 .navbar{
     background-color: green;
@@ -27,5 +28,5 @@ button:hover{
 .card:hover{
     box-shadow: 0 0 10px , 0 0 20px rgb(112, 108, 108), 0 0 40px rgb(112, 108, 108);
     border-radius: 10px;
-    
+
 }
